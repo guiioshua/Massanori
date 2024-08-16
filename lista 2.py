@@ -61,9 +61,3 @@ abc = [a, b, c]
 def maior = (abc)
 
 
-if a > b and a > c:
-    print('O primeiro é o maior número')
-if b > a and b > c:
-    print('O segundo é o maior número')
-if c > a and c > b:
-    print('O terceiro é o maior número')
