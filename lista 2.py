@@ -1,4 +1,4 @@
-'''#Ex1
+#Ex1
 a = float(input('Lado a:'))
 b = float(input('Lado b:'))
 c = float(input('Lado c:'))
@@ -12,9 +12,9 @@ if a+b>c and a+c>b and c+b>a:
         print ("É um triângulo escaleno")
 
 else: print('Não pode ser um triângulo')
-'''
 
-'''#Ex2
+
+#Ex2
 ano = int(input('Digite o ano: '))
 if ano % 4 == 0:
     if ano % 400 == 0:
@@ -24,9 +24,9 @@ if ano % 4 == 0:
     else: print('O ano é bissexto')
 
 else: print('O ano não é bissexto')
-'''
 
-'''#Ex3
+
+#Ex3
 peso = float(input('Digite o peso dos peixes: '))
 exceco = (peso - 50)
 multa = exceco * 4
@@ -36,10 +36,9 @@ else:
     exceco = 0
     multa  = 0
     print(f'EXCEÇO: {exceco}KG\nMULTA: R${multa:.2f}')
-'''
+
 
 #Ex4
-'''
 a = int(input('Digíte o primeiro número:'))
 b = int(input('Digíte o segundo número:'))
 c = int(input('Digíte o terceiro número:'))
@@ -50,14 +49,18 @@ if b > a and b > c:
     print('O segundo é o maior número')
 if c > a and c > b:
     print('O terceiro é o maior número')         
-'''
+
 
 #Ex5 fazer uma função com um uma variavel 'maior' = ao primeiro elemento de abc e um loop for numero in abc que substitui o maior com o elemento do array caso ele for > q o maior
 a = int(input('Digíte o primeiro número:'))
 b = int(input('Digíte o segundo número:'))
 c = int(input('Digíte o terceiro número:'))
-
-abc = [a, b, c]
-def maior = (abc)
-
+abc = [a,b,c]
+maior = abc[0]
+i = 1
+while i <= 2:
+    if maior <= abc[1]:
+        maior = abc[i+1]
+    i+1
+print(maior)
 
