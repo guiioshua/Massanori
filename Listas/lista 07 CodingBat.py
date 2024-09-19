@@ -20,7 +20,7 @@ def string_splosion(s):
 # C. array_count9
 # conta quantas vezes aparece o 9 numa lista nums
 def array_count9(nums):
-  return
+  return len([num for num in nums if num==9])
 
 # D. array_front9
 # verifica se pelo menos um dos quatro primeiros é nove
@@ -28,7 +28,7 @@ def array_count9(nums):
 # array_front9([1, 2, 3, 4, 9]) -> False
 # array_front9([1, 2, 3, 4, 5]) -> False
 def array_front9(nums):
-  return
+  return any(num==9 for num in nums)
 
 # E. hello_name
 # seja uma string name
@@ -36,14 +36,14 @@ def array_front9(nums):
 # hello_name('Alice') -> 'Hello Alice!'
 # hello_name('X') -> 'Hello X!'
 def hello_name(name):
-  return
+  return 'Hello '+name+'!'
 
 # F. make_tags
 # make_tags('i', 'Yay'), '<i>Yay</i>'
 # make_tags('i', 'Hello'), '<i>Hello</i>'
 # make_tags('cite', 'Yay'), '<cite>Yay</cite>'
 def make_tags(tab, word):
-  return 
+  return '<'+tab+'>'+word+'</'+tab+'>'
 
 # G. extra_end
 # seja um string s com no mínimo duas letras
@@ -52,7 +52,7 @@ def make_tags(tab, word):
 # extra_end('ab'), 'ababab'
 # extra_end('Hi'), 'HiHiHi'  
 def extra_end(s):
-  return 
+  return 3*s[-2:] if len(s)>=2 else None
 
 # H. first_half
 # seja uma string s
@@ -61,7 +61,7 @@ def extra_end(s):
 # first_half('HelloThere') -> 'Hello'
 # first_half('abcdef') -> 'abc'
 def first_half(s):
-  return 
+  return s[:int((len(s)/2))]
 
 # I. sem_pontas
 # seja uma string s de pelo menos dois caracteres
@@ -70,7 +70,7 @@ def first_half(s):
 # without_end('python') -> 'ytho'
 # without_end('coding') -> 'odin'
 def sem_pontas(s):
-  return 
+  return s[1:-1]
 
 # J. roda2
 # rodar uma string s duas posições
@@ -78,7 +78,7 @@ def sem_pontas(s):
 # left2('Hello') -> 'lloHe'
 # left2('Hi') -> 'Hi'
 def roda2(s):
-  return 
+  return s[2:]+s[:2] if len(s)>2 else s
 
 
 # Provided simple test() function used in main() to print
