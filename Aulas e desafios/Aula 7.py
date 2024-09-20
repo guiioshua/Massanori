@@ -94,6 +94,7 @@ rnxhwgd jgngwzc kfvg nwkjt rhjtsvv txk szkpmn nnzbqwgs pjjzqkvx bkw dfcbw rffn q
 kckksgp nzn tpqnm znzppsg tvcgnrb zgdsp tqlqrf vjqqxsp pwj pgft cvl cvr cnhgxsd lkd qlw 
 vwtbh mfxs gbgw'''.split()
 
+
 letraZumbi = 'zmb'
 
 def preposição(txt):
@@ -117,13 +118,36 @@ def verbo(txt):
             verbosFP.append(palavra)
     return len(verbos), len(verbosFP)
 
-print((verbo(txtA)))
+print(verbo(txtA))
+print(verbo(txtB))
 
-alfabetoGooglon = list('zmbtshjpnwlrcxkqvdgf')
-alfabeto = list('bcdfghjklmnpqrstvwxz')
-dicionario = []
 
-for letra, letraGooglon in alfabeto, alfabetoGooglon:
-    dicionario[letra] = letraGooglon
+alfabetoGooglon = 'zmbtshjpnwlrcxkqvdgf'
+alfabeto = 'ABCDEFGHIJKLMNOPQRST'
+def tradutor(s):
+    resp = ''
+    for letra in s:
+        resp += alfabeto[alfabetoGooglon.index(letra)]
+    return resp
+def sorteado(txt):
+    txt = sorted(txt, key = tradutor)
+    return txt
+print(sorteado(txtA)) 
+print(sorteado(txtB))   
 
-print(dicionario)
+
+def transformaEmNumero(s):
+    expoente = 0
+    numero = 0
+    for palavra in s:
+        for letra in palavra:
+            numero += alfabetoGooglon.index(letra)*20**expoente
+            expoente += 1
+        return numero
+
+def achaMágico(txt):
+    contador = 0
+    if transformaEmNumero(txt) % 42 and len(transformaEmNumero(txt)==len(set(transformaEmNumero(txt)))):
+        contador+=1
+    return contador
+print(achaMágico(txtA))
