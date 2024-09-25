@@ -144,12 +144,13 @@ def palavraParaNúmero(palavra):
         i += 1
     return numero
 
-def numeroMágico(txt):
+def contaNumeroMágico(txt):
     numerosMágicos = []
     for palavra in txt:
-        if palavraParaNúmero(palavra) % 42 == 0 and len(str(palavraParaNúmero(palavra))) == len(set(str(palavraParaNúmero(palavra)))):
+        if palavraParaNúmero(palavra) % 42 == 0 and len(palavra)==len(set(palavra)):
             numerosMágicos.append(palavra)
-    return len(numerosMágicos)
+    return(len(numerosMágicos))
 
 
-print(numeroMágico(txtA))
+print(contaNumeroMágico(txtA))
+print(contaNumeroMágico(txtB))
