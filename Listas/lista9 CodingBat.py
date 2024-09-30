@@ -46,7 +46,7 @@ def maior_ponta(nums):
 # retorna a soma dos dois primeiros elementos
 # se a lista tiver menos de dois elementos, soma o que for possível
 def sum2(nums):
-  return 
+  return nums[0]+nums[1] if len(nums) >= 2 else (nums[0] if len(nums) ==  1 else 0)
 
 # F. middle_way #
 # sejam duas listas de inteiros a e b
@@ -56,7 +56,7 @@ def sum2(nums):
 # middle_way([7, 7, 7], [3, 8, 0]) -> [7, 8]
 # middle_way([5, 2, 9], [1, 4, 5]) -> [2, 4]
 def middle_way(a, b):
-  return 
+  return [a[len(a)//2], b[len(b)//2]]
 
 # G. date_fashion
 # você e sua namorada(o) vão a um restaurante
@@ -73,7 +73,7 @@ def middle_way(a, b):
 # date_fashion(5, 2) -> 0
 # date_fashion(5, 5) -> 1
 def date_fashion(eu, par):
-  return
+  return 0 if eu <= 2 or par <= 2 else (2 if eu >= 8 or par >= 8 else 1)
 
 # H. squirrel_play
 # os esquilos na FATEC brincam quando a temperatura está entre 60 e 90
@@ -84,7 +84,7 @@ def date_fashion(eu, par):
 # squirrel_play(95, False) -> False
 # squirrel_play(95, True) -> True
 def squirrel_play(temp, is_summer):
-  return
+  return temp >= 60 and temp <= 100 if is_summer else temp>= 60 and temp <= 90
 
 # I. pego_correndo
 # você foi pego correndo
@@ -100,7 +100,9 @@ def squirrel_play(temp, is_summer):
 # pego_correndo(65, False) -> 1
 # pego_correndo(65, True) -> 0 
 def pego_correndo(speed, is_birthday):
-  return
+  if is_birthday:
+    return 0 if speed <= 65 else(2 if speed > 85 else 1)
+  else: return 0 if speed <= 60 else(2 if speed > 80 else 1)
 
 # J. alarm_clock #
 # day: 0=domingo, 1=segunda, 2=terça, ..., 6=sábado
@@ -115,7 +117,9 @@ def pego_correndo(speed, is_birthday):
 # alarm_clock(5, False) -> '7:00'
 # alarm_clock(0, False) -> '10:00'
 def alarm_clock(day, vacation):
-  return
+  if not vacation:
+    return '7:00' if day >= 1 and day <= 5 else '10:00'
+  else: return '10:00' if day >= 1 and day <= 5 else 'off'
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
