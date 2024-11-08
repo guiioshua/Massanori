@@ -66,7 +66,10 @@ def count_hi(s):
 # cat_dog('catcat') -> False
 # cat_dog('1cat1cadodog') -> True
 def cat_dog(s):
-  return
+  cat = dog = []
+  for k in range (len(s)):
+    if s[k::3]
+  return len(cat) == len(dog)
 
 # G. count_code #
 # conta quantas vezes aparece 'code'
@@ -76,7 +79,7 @@ def cat_dog(s):
 # count_code('codexxcode') -> 2
 # count_code('cozexxcope') -> 2
 def count_code(s):
-  return
+  return 
 
 # H. end_other #
 # as duas strings devem ser convertidas para minúsculo via lower()
