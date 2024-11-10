@@ -147,7 +147,8 @@ def soma_na_lista(n, lista):
 # fila_tijolos(3, 1, 9) -> False
 # fila_tijolos(3, 2, 10) -> True
 def fila_tijolos(n_peq, n_gra, meta):
-  return
+  return n_gra * 5 + n_peq >= meta and n_peq >= meta % 5
+
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):
